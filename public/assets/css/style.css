@@ -1,0 +1,143 @@
+body{
+	margin:0 auto;
+	font-family:"Roboto", sans-serif;
+	padding: 20px;
+	color:grey;
+}
+
+.page-content{
+	display: flex;
+	justify-content:space-around;
+	background-color: #EAF4F4;
+	border-radius: 10px;
+	min-height: 95vh;
+}
+
+/* Header Styling ===================================== */
+h2{
+	font:100 24px "Roboto";
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+h2:after {
+	content:""; 
+	background: grey; 
+	position: absolute; 
+	transform: rotate(90deg);
+	left:50%;
+	bottom: 0;
+	top:50%;
+	height: 100%; 
+	width: 1px;
+}
+
+/* List Items ===================================== */
+ul{
+	max-height:80vh;
+	overflow: scroll;
+	padding-right: 20px;
+}
+
+li{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style-type: none;
+	min-width:325px;
+	font-size:14px;
+}
+
+button {
+	margin:5px;
+	cursor: pointer;
+	border-radius: 50%;
+	width:40px;
+	height: 40px;
+	border:2px solid lightgrey;
+	color:#6B9080;
+}
+
+button:hover{
+	background-color: #6B9080;
+	color:white;
+	transition: .5s;
+	border-color:grey;
+}
+
+button:focus, button:active{
+	outline: none;
+}
+
+/* Add a Book Form ====================================== */
+.add-book{
+	text-align: center;
+	padding:0 40px;
+	min-width: 200px;
+}
+
+p{
+	font:100 16px "Roboto";
+}
+
+.add-book button{
+	background-color: #A4C3B2;
+	color:white;
+	border:none;
+	border-radius: 50%;
+	margin:20px 5px;
+}
+
+.add-book button:hover {
+	background-color:#6B9080;
+	transition: .25s;
+}
+
+input[type=text], input[type=text]:focus{
+	padding: 10px;
+	outline:none;
+	width:100%;
+	border-radius: 10px;
+	border:2px solid lightgrey;
+	font-size:15px;
+	color:#6B9080;
+}
+
+#radio-buttons{
+	padding:20px 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 100;
+	font-size: 14px;
+}
+
+input[type=radio]{
+	cursor: pointer;
+	margin:10px 10px 10px 0;
+}
+
+.test{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/* Responsiveness ================================== */
+@media screen and (max-width: 600px) {
+	.page-content{
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.page-content{
+		flex-wrap: wrap;
+	}
+
+	.add-book{
+		order:-1;
+	}
+}

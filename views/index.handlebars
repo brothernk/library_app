@@ -1,0 +1,48 @@
+<div class="page-content">
+	<div class="add-book">
+		<h1>my library</h1>
+			<p>
+				Add books to your to-read list, or add them to a list of your favorites.
+				If you're looking for suggestions, click the question mark and a random book will
+				be added to your to-read list. 
+			</p>
+		<form class="create-form">
+			<div class="form-group">
+				<input type="text" id="enter-book" name="name">
+			</div>
+
+			<div class="test">
+				<div class ="form-group" id="radio-buttons">
+					<input type="radio" name="readbook" value="0" checked>Need to read<br>
+					<input type="radio" name="readbook" value="1">Read & Loved
+				</div>
+				<div>
+					<button type="submit"><i class="fas fa-question"></i></button>
+					<button type="submit"><i class="fas fa-check"></i></button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="need-to-read">
+		<h2>Need to read</h2>
+		<ul>
+			{{#each books}}
+				{{#unless readbook}}
+					{{> books/book-block readbook=true}}
+				{{/unless}}
+			{{/each}}
+		</ul>
+	</div>
+
+	<div class="already-read">
+		<h2>Read and loved</h2>
+		<ul>
+			{{#each books}}
+				{{#if readbook}}
+					{{> books/book-block readbook=false}}
+				{{/if}}
+			{{/each}}
+		<ul>
+	</div>
+</div>
