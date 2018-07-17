@@ -1,20 +1,20 @@
 //MySQL Connection
 var mysql = require("mysql");
 
-// var connection;
-// // if(process.env.JAWSDB_URL) {
-// //   //Heroku deployment
-// //     connection = mysql.createConnection(process.env.JAWSDB_URL);
-// // } else {
-// //   //local host
-   var connection = mysql.createConnection({
-        root: 3000,
+var connection;
+if(process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} 
+
+else {
+    connection = mysql.createConnection({
+        port: 3306,
         host: "localhost",
         user: "root",
         password: "",
         database: "bookclub_db",
     });
-// };
+};
 
 connection.connect(function(err){
 	if (err){
