@@ -17,8 +17,17 @@ $(function(){
 		});
 	});
 
+	function validateForm() {
+		var x = document.forms["myForm"]["fname"].value;
+		if (x == "") {
+			alert("Name must be filled out");
+			return false;
+		}
+	}
+
 	$(".create-form").on("submit", function(event){
 		event.preventDefault();
+
 		let newBook = {
 			name:$("#enter-book").val().trim(),
 			readbook:$("[name=readbook]:checked").val().trim()
