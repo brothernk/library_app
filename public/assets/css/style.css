@@ -93,7 +93,7 @@ button:focus, button:active{
 	text-align: center;
 	padding:0 50px;
 	min-width: 200px;
-	background-color:#EAF4F4;
+	background-color:#C5D8CE;
 	box-shadow: 1px 1px 10px lightgrey;
 	width:100vw;
 }
@@ -104,7 +104,7 @@ p{
 }
 
 .add-book button{
-	background-color: #A4C3B2;
+	background-color: #6B9080;
 	color:white;
 	border-radius: 50%;
 	margin:20px 5px;
@@ -112,9 +112,9 @@ p{
 }
 
 .add-book button:hover {
-	background-color:#6B9080;
+	background-color:#4a6459;
 	transition: .25s;
-	transform: scale(.99);
+	transform: scale(.98);
 }
 
 input[type=text], input[type=text]:focus{
@@ -122,7 +122,7 @@ input[type=text], input[type=text]:focus{
 	outline:none;
 	width:100%;
 	border-radius: 10px;
-	border:2px solid lightgrey;
+	border:2px solid #a6a6a6;
 	font-size:15px;
 	color:#6B9080;
 }
@@ -131,7 +131,7 @@ input[type=text], input[type=text]:focus{
 	padding:20px 0;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: 100;
+	font-weight: 300;
 	font-size: 14px;
 }
 
@@ -168,7 +168,10 @@ input[type=radio]{
 	.book-lists{
 		margin:15px;
 	}
-}
+};
 
 @media screen and (max-width: 600px) {
+	.book-lists{
+		flex-direction: column;
+	}
 }
