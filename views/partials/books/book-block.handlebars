@@ -1,10 +1,9 @@
 <li>
-	{{name}}
+	<h6 class="book-title">{{name}}</h6>
 	<div>
 		<button class="change-readbook" data-id="{{id}}" data-newreadbook="{{readbook}}">
 			{{#if readbook}}<i class="fas fa-check"></i>{{else}}<i class="fas fa-redo-alt"></i>{{/if}}
 		</button>
-
 		<button class="delete-book" data-id="{{this.id}}"><i class="fas fa-times"></i></button>
 	</div>
 </li>
