@@ -173,14 +173,13 @@ input[type=radio]{
 		margin-left:50px;
 	}
 	.book-lists{
-		margin:15px;
+		margin:15px 10px;
 	}
 }
 
 @media screen and (max-width: 750px) {
 	.page-content{
-		justify-content: center;
-		
+		justify-content: center;	
 	}
 	.book-lists{
 		flex-direction: column;
@@ -188,17 +187,17 @@ input[type=radio]{
 	}
 	ul{
 		max-height:100%;
-		overflow: scroll;
-		max-width: 100%;
+		width: 100%;
 		display:flex;
 		flex-direction: column;
 		align-items: center;
 	}
 	li{
 		min-width:100px;
+		max-width: 78vw;
 		width:100%;
-		max-width:75vw;
 		margin:6px 0;
+		overflow: hidden;
 	}
 	input[type=radio]{
 		margin:5px 5px 5px 0;
@@ -214,6 +213,3 @@ input[type=radio]{
 		justify-content: space-between;
 	}
 }
-
-
-
